@@ -6,7 +6,7 @@ using GigHub.Dtos;
 
 namespace GigHub.Controllers
 {
-
+    [Authorize]
     public class AttendancesController : ApiController
     {
         private ApplicationDbContext _context;
