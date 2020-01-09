@@ -182,6 +182,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ArtistController.cs" />
     <Compile Include="Controllers\AttendancesController.cs" />
     <Compile Include="Controllers\FollowingsController.cs" />
     <Compile Include="Controllers\GigsController.cs" />
@@ -306,6 +307,7 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Gigs\Create.cshtml" />
+    <Content Include="Views\Artist\Following.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
