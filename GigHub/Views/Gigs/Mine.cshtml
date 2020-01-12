@@ -20,8 +20,9 @@
                     @gig.Venue
                 </span>
                 <span class="genre">@gig.Genre.Name</span>
-                <div >
-                    <a class="action btn btn-info btn-sm" href="@Url.Action("Edit","Gigs",new {id=gig.Id})">Edit</a>
+                <div class="action" >
+                    <a class="" href="@Url.Action("Edit","Gigs",new {id=gig.Id})">Edit</a>|
+                    <a class="" id="js-gig-cancel" data-gig-id="@gig.Id" href="#">Cancle</a>
                     
                 </div>
             </div>
@@ -29,3 +30,54 @@
     }
 </ul>
 
+@section scripts
+{
+    
+    <script>
+        $(document).ready(function() {
+            $("#js-gig-cancel").click(function(e) {
+
+                var link = $(e.target);
+
+                bootbox.dialog({
+                    title: 'Confrim',
+                    message: 'Are you sure to cancel this gig?',
+                    size: 'small',
+                    onEscape: true,
+                    backdrop: true,
+                    buttons: {
+                        No: {
+                            label: 'No',
+                            className: 'btn-default',
+                            callback: function() {
+                                bootbox.hideAll();
+                            }
+                        },
+                        Yes: {
+                            label: 'Yes',
+                            className: 'btn-danger',
+                            callback: function() {
+                                $.ajax({
+                                        url: "/api/Gigs/" + link.attr("data-gig-id"),
+                                        method: "DELETE"
+                                    })
+                                    .done(function () {
+                                        link.parents("li").fadeOut(function () {
+                                            $(this).remove();
+                                        });
+                                    })
+                                    .fail(function () {
+                                        alert("Something Failed");
+                                    });
+
+                            }
+                        }
+
+                    }
+                });
+
+            });
+
+        });
+    </script>
+}
