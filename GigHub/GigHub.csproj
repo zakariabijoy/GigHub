@@ -230,6 +230,18 @@
     <Compile Include="Migrations\202001121911554_IsCanceledIsAddedToGig.Designer.cs">
       <DependentUpon>202001121911554_IsCanceledIsAddedToGig.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202001131145108_AddNotification.cs" />
+    <Compile Include="Migrations\202001131145108_AddNotification.Designer.cs">
+      <DependentUpon>202001131145108_AddNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001131152572_AddNotification1.cs" />
+    <Compile Include="Migrations\202001131152572_AddNotification1.Designer.cs">
+      <DependentUpon>202001131152572_AddNotification1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001131202237_AddNotification2.cs" />
+    <Compile Include="Migrations\202001131202237_AddNotification2.Designer.cs">
+      <DependentUpon>202001131202237_AddNotification2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\Attendance.cs" />
@@ -238,6 +250,9 @@
     <Compile Include="Models\Gig.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Notification.cs" />
+    <Compile Include="Models\NotificationType.cs" />
+    <Compile Include="Models\UserNotification.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\ExternalLoginConfirmationViewModel.cs" />
@@ -356,6 +371,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202001121911554_IsCanceledIsAddedToGig.resx">
       <DependentUpon>202001121911554_IsCanceledIsAddedToGig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001131145108_AddNotification.resx">
+      <DependentUpon>202001131145108_AddNotification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001131152572_AddNotification1.resx">
+      <DependentUpon>202001131152572_AddNotification1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001131202237_AddNotification2.resx">
+      <DependentUpon>202001131202237_AddNotification2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
