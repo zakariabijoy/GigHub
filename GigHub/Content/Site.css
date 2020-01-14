@@ -47,6 +47,19 @@ span.field-validation-error {
     color: #ffffff;
     font-weight: 700;
 }
+
+.navbar-inverse .notifications {
+    position: relative;
+}
+
+.navbar-inverse .notifications .badge {
+    position: absolute;
+    top: 8px;
+    right: -1px;
+    background-color: #a80a0a;
+    
+}
+
 .navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {
     color: #42feff;
     background-color: transparent;
@@ -155,6 +168,8 @@ h6,
     display: block;
     line-height: 8px;
 }
+
+
 
 
 
