@@ -1,0 +1,227 @@
+﻿@color_1: red;
+@color_2: #ffffff;
+@color_3: #42feff;
+@color_4: #333;
+@font_family_1: Lato,"Helvetica Neue", Helvetica, Arial, sans-serif;
+@background_color_1: #ff4342;
+@background_color_2: transparent;
+@background_color_3: #a80a0a;
+@background_color_4: rgba(205, 40, 39, 0.55);
+@background_color_5: red;
+@background_color_6: #f7f7f7;
+@border_color_1: #ff4342;
+@border_top_color_1: #ffffff;
+@border_bottom_color_1: #ffffff;
+
+/* Set padding to keep content from hitting the edges */
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+/* Set width on the form input elements since they're 100% wide by default */
+/* BootStrap OverRide */
+/* page-level style */
+body {
+	padding-top: 90px;
+	padding-bottom: 20px;
+	font-family: @font_family_1;
+}
+.body-content {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.dl-horizontal {
+	dt {
+		white-space: normal;
+	}
+}
+input {
+	max-width: 280px;
+}
+select {
+	max-width: 280px;
+}
+textarea {
+	max-width: 280px;
+}
+span.field-validation-error {
+	color: @color_1;
+	font-weight: bold;
+}
+.navbar-inverse {
+	background-color: @background_color_1;
+	border-color: @border_color_1;
+	.navbar-nav {
+		>li {
+			>a {
+				color: @color_2;
+				&:hover {
+					color: @color_3;
+					background-color: @background_color_2;
+				}
+				&:focus {
+					color: @color_3;
+					background-color: @background_color_2;
+				}
+			}
+		}
+		>.open {
+			>a {
+				background-color: @background_color_4;
+				&:hover {
+					background-color: @background_color_4;
+				}
+				&:focus {
+					background-color: @background_color_4;
+				}
+			}
+		}
+		>.dropdown {
+			>a {
+				.caret {
+					border-top-color: @border_top_color_1;
+					border-bottom-color: @border_bottom_color_1;
+				}
+			}
+		}
+	}
+	.navbar-brand {
+		color: @color_2;
+		font-weight: 700;
+		&:hover {
+			color: @color_3;
+			background-color: @background_color_2;
+		}
+		&:focus {
+			color: @color_3;
+			background-color: @background_color_2;
+		}
+	}
+	.notifications {
+		position: relative;
+		.badge {
+			position: absolute;
+			top: 8px;
+			right: -1px;
+			background-color: @background_color_3;
+		}
+	}
+}
+.body {
+	font-size: 17px;
+}
+h1 {
+	font-family: @font_family_1;
+}
+h2 {
+	font-family: @font_family_1;
+}
+h3 {
+	font-family: @font_family_1;
+}
+h4 {
+	font-family: @font_family_1;
+}
+h5 {
+	font-family: @font_family_1;
+}
+h6 {
+	font-family: @font_family_1;
+}
+.h1 {
+	font-family: @font_family_1;
+}
+.h2 {
+	font-family: @font_family_1;
+}
+.h3 {
+	font-family: @font_family_1;
+}
+.h4 {
+	font-family: @font_family_1;
+}
+.h5 {
+	font-family: @font_family_1;
+}
+.h6 {
+	font-family: @font_family_1;
+}
+.form-group {
+	margin-bottom: 20px;
+}
+.form-control {
+	font-size: 17px;
+	height: 44px;
+	-ms-border-radius: 9px;
+	border-radius: 9px;
+}
+.btn {
+	-ms-border-radius: 9px;
+	border-radius: 9px;
+}
+.gigs {
+	list-style: none;
+	>li {
+		position: relative;
+		margin-bottom: 30px;
+		.date {
+			background-color: @background_color_5;
+			color: @color_2;
+			width: 60px;
+			text-align: center;
+			border-radius: 8px;
+			.month {
+				text-transform: uppercase;
+				font-size: 14px;
+				font-weight: bold;
+				padding: 2px 6px;
+			}
+			.day {
+				background-color: @background_color_6;
+				color: @color_4;
+				font-size: 20px;
+				padding: 6px 12px;
+			}
+		}
+		.details {
+			position: absolute;
+			top: 0px;
+			left: 70px;
+			.artist {
+				font-weight: bold;
+				display: block;
+			}
+			.genre {
+				font-size: 15px;
+			}
+		}
+		.action {
+			font-size: 15px;
+			display: none;
+		}
+		&:hover {
+			.action {
+				display: block;
+				line-height: 8px;
+			}
+		}
+	}
+}
+.popover-notifications {
+	.popover-content {
+		padding: 0;
+	}
+	ul.notifications {
+		padding-left: 0px;
+		list-style: none;
+		>li {
+			border-bottom: 1px solid #ddd;
+			padding: 10px;
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+		.highlight {
+			font-weight: bold;
+		}
+	}
+}

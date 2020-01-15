@@ -12,27 +12,14 @@
                 <div class="month">@gig.Date.ToString("MMM")</div>
                 <div class="day">@gig.Date.ToString("d ")</div>
             </div>
-            <div class="details">
-                <span class="artist">
-                    @gig.Artist.Name
+            <div class="details"><span class="artist">shakhawat
                     
-                    @if (gig.IsCanceled)
-                    {
-                        <span class="label label-danger"> Canceled</span>
-                    }
 
-                    @if (Model.ShowActions)
-                    {
-                        <button data-user-id="@gig.ArtistId" class="btn btn-default btn-sm pull-right js-toggle-follow">Follow</button>
-                    }
+                        <button data-user-id="d7974529-a150-42a9-8a4c-25aa9a41f807" class="btn btn-default btn-sm pull-right js-toggle-follow">Follow</button>
 
                 </span>
-                <span class="genre">@gig.Genre.Name</span>
-                @if (Model.ShowActions && !gig.IsCanceled)
-                {
-
-                    <button data-gig-id="@gig.Id" class="btn btn-default btn-sm pull-right js-toggle-attendance">Going?</button>
-                }
+                <span class="genre">Jazz</span>
+                    <button data-gig-id="10" class="btn btn-default btn-sm pull-right js-toggle-attendance">Going?</button>
             </div>
         </li>
     }
