@@ -43,7 +43,7 @@
     @RenderSection("scripts", required: false)
     
 <script type="text/x-template" id="notifications-template">
-    <ul>
+    <ul class="notifications">
         <%
         _.each(notifications, function(notification){
 
@@ -52,7 +52,7 @@
         <%}
 
         else if(notification.notificationType == 2){
-                var changes = [],
+            var changes = [],
                 originalValues=[],
                 newValues=[];
 
@@ -69,7 +69,7 @@
                 }
         %>
 
-        <li> <%= notification.gig.artist.name %> has updated the <%= change.join(' and ') %> of the gig from <%= originalValues.join(' / ') %> to <%= newValues.join(' / ') %> .  </li>
+        <li> <%= notification.gig.artist.name %> has updated the <%= changes.join(' and ') %> of the gig from <%= originalValues.join(' / ') %> to <%= newValues.join(' / ') %> .  </li>
         <%}
         if(notification.notificationType == 3){%>
         <li> <%= notification.gig.artist.name %> has created the gig at <%= notification.gig.venue %> at <%= notification.gig.date %>. </li>
@@ -82,7 +82,7 @@
         $(document).ready(function() {
             $.getJSON("/api/notifications",
                 function (notifications) {
-                    if (notifications.length == 0)
+                    if (notifications.length === 0)
                         return;
 
                     $(".js-notifications-count")
@@ -98,7 +98,9 @@
                             return  compiled({ notifications: notifications });
                             
                         },
-                        placement: "bottom"
+                        placement: "bottom",
+
+                        template: '<div class="popover popover-notifications" role="tooltip"><div class="arrow"></div><h3 class="popover-title"></h3><div class="popover-content"></div></div>'
                     });
                 });
             

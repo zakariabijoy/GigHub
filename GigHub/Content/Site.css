@@ -169,7 +169,21 @@ h6,
     line-height: 8px;
 }
 
+.popover-notifications .popover-content {
+    padding: 0;
+}
+.popover-notifications ul.notifications  {
+    padding-left: 0px;
+    list-style: none;
+}
 
+.popover-notifications ul.notifications > li {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
 
+.popover-notifications ul.notifications > li:last-child {
+    border-bottom: none;
+}
 
 
