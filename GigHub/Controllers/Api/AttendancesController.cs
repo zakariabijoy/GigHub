@@ -1,8 +1,8 @@
-﻿using System.Linq;
-using System.Web.Http;
-using GigHub.Dtos;
+﻿using GigHub.Dtos;
 using GigHub.Models;
 using Microsoft.AspNet.Identity;
+using System.Linq;
+using System.Web.Http;
 
 namespace GigHub.Controllers.Api
 {
@@ -34,6 +34,24 @@ namespace GigHub.Controllers.Api
             _context.Attendances.Add(attendance);
             _context.SaveChanges();
             return Ok();
+        }
+
+        [HttpDelete]
+        public IHttpActionResult DeleteAttendance(int id)
+        {
+            var userId = User.Identity.GetUserId();
+
+            var attandance = _context.Attendances
+                .SingleOrDefault(a => a.AttendeeId == userId && a.GigId == id);
+
+            if (attandance == null)
+                return NotFound();
+
+            _context.Attendances.Remove(attandance);
+            _context.SaveChanges();
+
+            return Ok(id);
+
         }
     }
 }
