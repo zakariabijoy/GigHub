@@ -49,7 +49,11 @@
                 @if (Model.ShowActions && !gig.IsCanceled)
                 {
 
-                    <button data-gig-id="@gig.Id" class="btn btn-default btn-sm pull-right js-toggle-attendance">Going?</button>
+                    <button data-gig-id="@gig.Id"
+                            class="btn @(Model.Attendaces.Contains(gig.Id) ? "btn-info" : "btn-default") 
+                            btn-sm pull-right js-toggle-attendance">
+                        Going?
+                    </button>
                 }
             </div>
         </li>
