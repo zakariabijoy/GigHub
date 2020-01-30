@@ -17,7 +17,7 @@ namespace GigHub.Controllers
         
         private readonly GenreRepository _genreRepository;
         private readonly FollowingRepository _followingRepository;  
-        private readonly UnitOfWork _unitOfWork;  
+        private readonly IUnitOfWork _unitOfWork;  
 
         public GigsController()
         {
